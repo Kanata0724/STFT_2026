@@ -24,4 +24,5 @@ for i = 1 : numFrame
 
     S(:, i) = paddedSig(startIndex : endIndex); % 信号を分割して代入
     S(:, i) = S(:, i) .* win; % 窓かけ
+    S(:, i) = fft(S(:, i)); %DFT
 end
